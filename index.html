@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SB TREND THRIFT — Dress Different</title>
 
-<meta name="description"
-content="SB Trend Thrift — curated streetwear, denim and one-of-one thrift pieces.">
+<meta name="description" content="SB Trend Thrift — curated thrift, denim and streetwear.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,29 +14,24 @@ content="SB Trend Thrift — curated streetwear, denim and one-of-one thrift pie
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-
-<!-- ================= ANNOUNCEMENT ================= -->
-
+<!-- TOP BAR -->
 <div class="announcement">
     <span>FREE SHIPPING ON ORDERS ABOVE ₹999</span>
-    <span>CURATED • ONE-OF-ONE • PRE-LOVED</span>
+    <span>CURATED • PRE-LOVED • ONE-OF-ONE</span>
 </div>
 
-
-<!-- ================= HEADER ================= -->
-
+<!-- HEADER -->
 <header class="header">
 
     <a href="#" class="logo">
         SB<span>THRIFT</span>
     </a>
 
-    <nav>
+    <nav class="desktop-nav">
         <a href="#new">NEW IN</a>
         <a href="#shop">SHOP</a>
         <a href="#collections">COLLECTIONS</a>
@@ -47,26 +40,23 @@ content="SB Trend Thrift — curated streetwear, denim and one-of-one thrift pie
 
     <div class="header-actions">
 
-        <button id="searchBtn" aria-label="Search">
+        <button id="searchBtn" class="icon-btn" aria-label="Search">
             <svg viewBox="0 0 24 24">
                 <circle cx="11" cy="11" r="7"></circle>
                 <line x1="16.5" y1="16.5" x2="22" y2="22"></line>
             </svg>
         </button>
 
-        <button id="wishlistBtn" aria-label="Wishlist">
+        <button id="wishlistBtn" class="icon-btn wishlist-main">
             ♡
         </button>
 
         <button id="cartBtn" class="cart-button">
-
             <svg viewBox="0 0 24 24">
                 <path d="M5 8h14l-1 12H6L5 8Z"></path>
                 <path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
             </svg>
-
             <span id="cartCount">0</span>
-
         </button>
 
         <button id="menuBtn" class="menu-btn">
@@ -75,129 +65,84 @@ content="SB Trend Thrift — curated streetwear, denim and one-of-one thrift pie
         </button>
 
     </div>
-
 </header>
 
-
-<!-- ================= MOBILE MENU ================= -->
-
+<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
 
-    <button id="closeMenu">×</button>
+    <button id="closeMenu" class="close-menu">×</button>
 
     <div class="mobile-links">
-
         <a href="#">HOME</a>
         <a href="#new">NEW IN</a>
         <a href="#shop">SHOP</a>
         <a href="#collections">COLLECTIONS</a>
         <a href="#story">ABOUT</a>
-
     </div>
 
 </div>
 
-
-<!-- ================= HERO ================= -->
-
+<!-- HERO -->
 <section class="hero">
 
     <img
         src="26E2F689-B3CF-4221-829D-3ECF2DF155AE.png"
         class="hero-img"
-        alt="SB Trend Thrift Fashion">
+        alt="SB Trend Thrift">
 
     <div class="hero-overlay"></div>
 
     <div class="hero-top">
-
         <span>SB TREND THRIFT / NEW DROP</span>
-
         <span>01 — 03</span>
-
     </div>
-
 
     <div class="hero-content">
 
-        <p class="eyebrow">
-            CURATED THRIFT / PAN INDIA
-        </p>
+        <p class="eyebrow">CURATED THRIFT / PAN INDIA</p>
 
         <h1>
             WEAR<br>
             SOMETHING<br>
-            <span>DIFFERENT.</span>
+            <em>DIFFERENT.</em>
         </h1>
 
-        <p>
+        <p class="hero-description">
             Handpicked thrift pieces, vintage finds and
             everyday streetwear for people who don't
             want to dress like everyone else.
         </p>
 
         <div class="hero-buttons">
-
-            <a href="#shop" class="btn white-btn">
-                SHOP NEW DROP ↗
-            </a>
-
-            <a href="#collections" class="btn outline-btn">
-                EXPLORE COLLECTION ↗
-            </a>
-
+            <a href="#shop" class="btn white-btn">SHOP NEW DROP ↗</a>
+            <a href="#collections" class="btn outline-btn">EXPLORE COLLECTION ↗</a>
         </div>
 
     </div>
 
-
     <div class="hero-bottom">
-
-        <div>
-            ↓ &nbsp; SCROLL TO EXPLORE
-        </div>
-
-        <div>
-            MORE THAN CLOTHES.<br>
-            IT'S A LIFESTYLE.
-        </div>
-
+        <span>↓ &nbsp; SCROLL TO EXPLORE</span>
+        <span>MORE THAN CLOTHES.<br>IT'S A LIFESTYLE.</span>
     </div>
 
 </section>
 
-
-<!-- ================= MARQUEE ================= -->
-
+<!-- MARQUEE -->
 <div class="marquee">
-
     <div>
-        SB TREND THRIFT ✦
-        DRESS DIFFERENT ✦
-        PRE-LOVED ✦
-        CURATED WEEKLY ✦
-        SB TREND THRIFT ✦
-        DRESS DIFFERENT ✦
-        PRE-LOVED ✦
-        CURATED WEEKLY ✦
+        SB TREND THRIFT ✦ DRESS DIFFERENT ✦ PRE-LOVED ✦ CURATED WEEKLY ✦
+        SB TREND THRIFT ✦ DRESS DIFFERENT ✦ PRE-LOVED ✦ CURATED WEEKLY ✦
     </div>
-
 </div>
 
-
-<!-- ================= INTRO ================= -->
-
+<!-- INTRO -->
 <section class="intro">
 
-    <span class="number">
-        01 / 06
-    </span>
+    <span class="number">01 / 06</span>
 
-    <div>
+    <div class="intro-content">
 
-        <p class="label">
-            THE NEW THRIFT ERA
-        </p>
+        <p class="label">THE NEW THRIFT ERA</p>
 
         <h2>
             NOT JUST CLOTHES.
@@ -211,210 +156,95 @@ content="SB Trend Thrift — curated streetwear, denim and one-of-one thrift pie
             and quality.
         </p>
 
-        <a href="#story" class="text-link">
-            OUR STORY ↗
-        </a>
+        <a href="#story" class="text-link">OUR STORY ↗</a>
 
     </div>
 
 </section>
 
-
-<!-- ================= COLLECTIONS ================= -->
-
+<!-- COLLECTIONS -->
 <section class="section" id="collections">
 
     <div class="section-head">
 
         <div>
-
-            <p class="label">
-                SHOP BY STYLE
-            </p>
-
-            <h2>
-                THE COLLECTIONS
-            </h2>
-
+            <p class="label">SHOP BY STYLE</p>
+            <h2>THE COLLECTIONS</h2>
         </div>
 
-        <span>
-            02 / 06
-        </span>
+        <span>02 / 06</span>
 
     </div>
-
 
     <div class="collections">
 
-
-        <!-- DENIM -->
-
-        <a href="#shop" class="collection large">
-
-            <img
-                src="IMG_0604.jpeg"
-                alt="SB Trend Thrift Denim">
-
-            <div>
-
+        <a href="#shop" class="collection collection-large">
+            <img src="IMG_0604.jpeg" alt="Denim">
+            <div class="collection-overlay">
                 <small>01</small>
-
-                <h3>
-                    DENIM
-                </h3>
-
-                <p>
-                    WIDE / BAGGY / VINTAGE
-                </p>
-
+                <h3>DENIM</h3>
+                <p>WIDE / BAGGY / VINTAGE</p>
             </div>
-
         </a>
 
-
-        <!-- STREET -->
-
         <a href="#shop" class="collection">
-
-            <img
-                src="IMG_0602.jpeg"
-                alt="SB Trend Thrift Streetwear">
-
-            <div>
-
+            <img src="IMG_0605.jpeg" alt="Streetwear">
+            <div class="collection-overlay">
                 <small>02</small>
-
-                <h3>
-                    STREET
-                </h3>
-
-                <p>
-                    BOLD / RELAXED / URBAN
-                </p>
-
+                <h3>STREET</h3>
+                <p>BOLD / RELAXED / URBAN</p>
             </div>
-
         </a>
-
-
-        <!-- VINTAGE -->
 
         <a href="#shop" class="collection">
-
-            <img
-                src="IMG_0605.jpeg"
-                alt="SB Trend Thrift Vintage">
-
-            <div>
-
+            <img src="IMG_0604.jpeg" alt="Vintage">
+            <div class="collection-overlay">
                 <small>03</small>
-
-                <h3>
-                    VINTAGE
-                </h3>
-
-                <p>
-                    RARE / UNIQUE / TIMELESS
-                </p>
-
+                <h3>VINTAGE</h3>
+                <p>RARE / UNIQUE / TIMELESS</p>
             </div>
-
         </a>
 
-
-        <!-- UNDER 999 -->
-
-        <a href="#shop" class="collection large">
-
-            <img
-                src="IMG_0604.jpeg"
-                alt="SB Trend Thrift Under 999">
-
-            <div>
-
+        <a href="#shop" class="collection collection-large">
+            <img src="IMG_0605.jpeg" alt="Under 999">
+            <div class="collection-overlay">
                 <small>04</small>
-
-                <h3>
-                    UNDER ₹999
-                </h3>
-
-                <p>
-                    GOOD STYLE / BETTER PRICE
-                </p>
-
+                <h3>UNDER ₹999</h3>
+                <p>GOOD STYLE / BETTER PRICE</p>
             </div>
-
         </a>
 
     </div>
-
 </section>
 
-
-<!-- ================= PRODUCTS ================= -->
-
+<!-- PRODUCTS -->
 <section class="section products" id="shop">
 
     <div class="section-head">
 
         <div>
-
-            <p class="label">
-                JUST LANDED
-            </p>
-
-            <h2>
-                NEW DROP
-            </h2>
-
+            <p class="label">JUST LANDED</p>
+            <h2>NEW DROP</h2>
         </div>
 
-        <button
-            class="filter-btn"
-            id="filterBtn">
-
+        <button id="filterBtn" class="filter-btn">
             FILTER / SORT
-
         </button>
 
     </div>
-
 
     <div class="filters" id="filters">
 
-        <button
-            class="filter active"
-            data-filter="all">
-            ALL
-        </button>
-
-        <button
-            class="filter"
-            data-filter="denim">
-            DENIM
-        </button>
-
-        <button
-            class="filter"
-            data-filter="streetwear">
-            STREETWEAR
-        </button>
-
-        <button
-            class="filter"
-            data-filter="vintage">
-            VINTAGE
-        </button>
+        <button class="filter active" data-filter="all">ALL</button>
+        <button class="filter" data-filter="denim">DENIM</button>
+        <button class="filter" data-filter="streetwear">STREETWEAR</button>
+        <button class="filter" data-filter="vintage">VINTAGE</button>
 
     </div>
 
-
     <div class="product-grid" id="productGrid">
 
-
         <!-- PRODUCT 1 -->
-
         <article
             class="product"
             data-category="denim"
@@ -424,101 +254,28 @@ content="SB Trend Thrift — curated streetwear, denim and one-of-one thrift pie
 
             <div class="product-image">
 
-                <img
-                    src="IMG_0604.jpeg"
-                    alt="Classic Blue Wide Denim">
+                <img src="IMG_0604.jpeg" alt="Classic Blue Wide Denim">
 
-                <span class="tag">
-                    NEW
-                </span>
+                <span class="tag">NEW</span>
 
-                <button class="heart">
-                    ♡
-                </button>
+                <button class="heart" aria-label="Wishlist">♡</button>
 
-                <button class="quick-add">
-                    QUICK ADD
-                </button>
+                <button class="quick-add">QUICK ADD</button>
 
             </div>
 
             <div class="product-info">
-
                 <div>
-
-                    <h3>
-                        Classic Blue Wide Denim
-                    </h3>
-
-                    <p>
-                        WIDE FIT / DENIM
-                    </p>
-
+                    <h3>Classic Blue Wide Denim</h3>
+                    <p>WIDE FIT / DENIM</p>
                 </div>
 
-                <strong>
-                    ₹999
-                </strong>
-
+                <strong>₹999</strong>
             </div>
 
         </article>
-
 
         <!-- PRODUCT 2 -->
-
-        <article
-            class="product"
-            data-category="streetwear"
-            data-name="Black Utility Denim"
-            data-price="1199"
-            data-image="IMG_0602.jpeg">
-
-            <div class="product-image">
-
-                <img
-                    src="IMG_0602.jpeg"
-                    alt="Black Utility Denim">
-
-                <span class="tag">
-                    LIMITED
-                </span>
-
-                <button class="heart">
-                    ♡
-                </button>
-
-                <button class="quick-add">
-                    QUICK ADD
-                </button>
-
-            </div>
-
-            <div class="product-info">
-
-                <div>
-
-                    <h3>
-                        Black Utility Denim
-                    </h3>
-
-                    <p>
-                        UTILITY / STREET FIT
-                    </p>
-
-                </div>
-
-                <strong>
-                    ₹1,199
-                </strong>
-
-            </div>
-
-        </article>
-
-
-        <!-- PRODUCT 3 -->
-
         <article
             class="product"
             data-category="vintage"
@@ -528,230 +285,167 @@ content="SB Trend Thrift — curated streetwear, denim and one-of-one thrift pie
 
             <div class="product-image">
 
-                <img
-                    src="IMG_0605.jpeg"
-                    alt="Washed Blue Vintage Denim">
+                <img src="IMG_0605.jpeg" alt="Washed Blue Vintage Denim">
 
-                <span class="tag">
-                    VINTAGE
-                </span>
+                <span class="tag">VINTAGE</span>
 
-                <button class="heart">
-                    ♡
-                </button>
+                <button class="heart" aria-label="Wishlist">♡</button>
 
-                <button class="quick-add">
-                    QUICK ADD
-                </button>
+                <button class="quick-add">QUICK ADD</button>
 
             </div>
 
             <div class="product-info">
-
                 <div>
-
-                    <h3>
-                        Washed Blue Vintage Denim
-                    </h3>
-
-                    <p>
-                        PRE-LOVED / PREMIUM WASH
-                    </p>
-
+                    <h3>Washed Blue Vintage Denim</h3>
+                    <p>PRE-LOVED / RELAXED</p>
                 </div>
 
-                <strong>
-                    ₹1,299
-                </strong>
-
+                <strong>₹1,299</strong>
             </div>
 
         </article>
 
+        <!-- PRODUCT 3 -->
+        <article
+            class="product"
+            data-category="streetwear"
+            data-name="Black Utility Denim"
+            data-price="1199"
+            data-image="IMG_0605.jpeg">
+
+            <div class="product-image">
+
+                <img src="IMG_0605.jpeg" alt="Black Utility Denim">
+
+                <span class="tag">LIMITED</span>
+
+                <button class="heart" aria-label="Wishlist">♡</button>
+
+                <button class="quick-add">QUICK ADD</button>
+
+            </div>
+
+            <div class="product-info">
+                <div>
+                    <h3>Black Utility Denim</h3>
+                    <p>UTILITY / STREET FIT</p>
+                </div>
+
+                <strong>₹1,199</strong>
+            </div>
+
+        </article>
 
         <!-- PRODUCT 4 -->
-
         <article
             class="product"
             data-category="denim"
-            data-name="Everyday Blue Wide Fit"
+            data-name="Everyday Wide Fit"
             data-price="899"
             data-image="IMG_0604.jpeg">
 
             <div class="product-image">
 
-                <img
-                    src="IMG_0604.jpeg"
-                    alt="Everyday Blue Wide Fit">
+                <img src="IMG_0604.jpeg" alt="Everyday Wide Fit">
 
-                <span class="tag">
-                    DROP 01
-                </span>
+                <span class="tag">DROP 01</span>
 
-                <button class="heart">
-                    ♡
-                </button>
+                <button class="heart" aria-label="Wishlist">♡</button>
 
-                <button class="quick-add">
-                    QUICK ADD
-                </button>
+                <button class="quick-add">QUICK ADD</button>
 
             </div>
 
             <div class="product-info">
-
                 <div>
-
-                    <h3>
-                        Everyday Blue Wide Fit
-                    </h3>
-
-                    <p>
-                        RELAXED / EVERYDAY
-                    </p>
-
+                    <h3>Everyday Wide Fit</h3>
+                    <p>RELAXED / EVERYDAY</p>
                 </div>
 
-                <strong>
-                    ₹899
-                </strong>
-
+                <strong>₹899</strong>
             </div>
 
         </article>
 
-
         <!-- PRODUCT 5 -->
-
         <article
             class="product"
             data-category="streetwear"
-            data-name="Black Relaxed Utility"
+            data-name="Relaxed Street Denim"
             data-price="1099"
-            data-image="IMG_0602.jpeg">
-
-            <div class="product-image">
-
-                <img
-                    src="IMG_0602.jpeg"
-                    alt="Black Relaxed Utility">
-
-                <span class="tag">
-                    ONE PIECE
-                </span>
-
-                <button class="heart">
-                    ♡
-                </button>
-
-                <button class="quick-add">
-                    QUICK ADD
-                </button>
-
-            </div>
-
-            <div class="product-info">
-
-                <div>
-
-                    <h3>
-                        Black Relaxed Utility
-                    </h3>
-
-                    <p>
-                        STREET / RELAXED FIT
-                    </p>
-
-                </div>
-
-                <strong>
-                    ₹1,099
-                </strong>
-
-            </div>
-
-        </article>
-
-
-        <!-- PRODUCT 6 -->
-
-        <article
-            class="product"
-            data-category="vintage"
-            data-name="Washed Blue Everyday Denim"
-            data-price="999"
             data-image="IMG_0605.jpeg">
 
             <div class="product-image">
 
-                <img
-                    src="IMG_0605.jpeg"
-                    alt="Washed Blue Everyday Denim">
+                <img src="IMG_0605.jpeg" alt="Relaxed Street Denim">
 
-                <span class="tag">
-                    RARE
-                </span>
+                <span class="tag">ONE PIECE</span>
 
-                <button class="heart">
-                    ♡
-                </button>
+                <button class="heart" aria-label="Wishlist">♡</button>
 
-                <button class="quick-add">
-                    QUICK ADD
-                </button>
+                <button class="quick-add">QUICK ADD</button>
 
             </div>
 
             <div class="product-info">
-
                 <div>
-
-                    <h3>
-                        Washed Blue Everyday Denim
-                    </h3>
-
-                    <p>
-                        VINTAGE / WIDE FIT
-                    </p>
-
+                    <h3>Relaxed Street Denim</h3>
+                    <p>STREET / RELAXED FIT</p>
                 </div>
 
-                <strong>
-                    ₹999
-                </strong>
-
+                <strong>₹1,099</strong>
             </div>
 
         </article>
 
+        <!-- PRODUCT 6 -->
+        <article
+            class="product"
+            data-category="vintage"
+            data-name="Classic Washed Denim"
+            data-price="999"
+            data-image="IMG_0604.jpeg">
+
+            <div class="product-image">
+
+                <img src="IMG_0604.jpeg" alt="Classic Washed Denim">
+
+                <span class="tag">RARE</span>
+
+                <button class="heart" aria-label="Wishlist">♡</button>
+
+                <button class="quick-add">QUICK ADD</button>
+
+            </div>
+
+            <div class="product-info">
+                <div>
+                    <h3>Classic Washed Denim</h3>
+                    <p>VINTAGE / WIDE FIT</p>
+                </div>
+
+                <strong>₹999</strong>
+            </div>
+
+        </article>
 
     </div>
 
 </section>
 
-
-<!-- ================= EDITORIAL ================= -->
-
+<!-- EDITORIAL -->
 <section class="editorial">
 
     <div class="editorial-image">
-
-        <img
-            src="IMG_0605.jpeg"
-            alt="SB Trend Thrift Editorial">
-
+        <img src="IMG_0605.jpeg" alt="SB Trend Thrift">
     </div>
-
 
     <div class="editorial-content">
 
-        <span>
-            03 / 06
-        </span>
+        <span>03 / 06</span>
 
-        <p class="label">
-            THE THRIFT EDIT
-        </p>
+        <p class="label">THE THRIFT EDIT</p>
 
         <h2>
             OLD PIECES.<br>
@@ -763,133 +457,64 @@ content="SB Trend Thrift — curated streetwear, denim and one-of-one thrift pie
             It's about finding what everyone else missed.
         </p>
 
-        <a
-            href="#shop"
-            class="btn dark-btn">
-
+        <a href="#shop" class="btn dark-btn">
             SHOP THE EDIT ↗
-
         </a>
 
     </div>
 
 </section>
 
-
-<!-- ================= WHY SB ================= -->
-
+<!-- WHY -->
 <section class="section why">
 
     <div class="section-head">
 
         <div>
-
-            <p class="label">
-                WHY SB
-            </p>
-
-            <h2>
-                THE SB STANDARD
-            </h2>
-
+            <p class="label">WHY SB</p>
+            <h2>THE SB STANDARD</h2>
         </div>
 
-        <span>
-            04 / 06
-        </span>
+        <span>04 / 06</span>
 
     </div>
 
-
     <div class="why-grid">
 
-
         <div>
-
-            <span>
-                01
-            </span>
-
-            <h3>
-                HANDPICKED
-            </h3>
-
-            <p>
-                Every piece is manually selected.
-                No random bulk drops.
-            </p>
-
+            <span>01</span>
+            <h3>HANDPICKED</h3>
+            <p>Every piece is manually selected. No random bulk drops.</p>
         </div>
 
-
         <div>
-
-            <span>
-                02
-            </span>
-
-            <h3>
-                LIMITED STOCK
-            </h3>
-
-            <p>
-                Most pieces are one-of-one.
-                If you like it, don't wait.
-            </p>
-
+            <span>02</span>
+            <h3>LIMITED STOCK</h3>
+            <p>Most pieces are one-of-one. If you like it, don't wait.</p>
         </div>
 
-
         <div>
-
-            <span>
-                03
-            </span>
-
-            <h3>
-                QUALITY CHECKED
-            </h3>
-
-            <p>
-                Every item goes through our
-                quality check before shipping.
-            </p>
-
+            <span>03</span>
+            <h3>QUALITY CHECKED</h3>
+            <p>Every item goes through our quality check before shipping.</p>
         </div>
 
-
         <div>
-
-            <span>
-                04
-            </span>
-
-            <h3>
-                BETTER FASHION
-            </h3>
-
-            <p>
-                Give clothes another life while
-                keeping your style original.
-            </p>
-
+            <span>04</span>
+            <h3>BETTER FASHION</h3>
+            <p>Give clothes another life while keeping your style original.</p>
         </div>
-
 
     </div>
 
 </section>
 
-
-<!-- ================= STORY ================= -->
-
+<!-- STORY -->
 <section class="story" id="story">
 
     <div>
 
-        <p class="label">
-            OUR PHILOSOPHY
-        </p>
+        <p class="label">OUR PHILOSOPHY</p>
 
         <h2>
             DRESS<br>
@@ -902,127 +527,65 @@ content="SB Trend Thrift — curated streetwear, denim and one-of-one thrift pie
             personality — not just another logo.
         </p>
 
-        <a
-            href="#shop"
-            class="text-link">
-
+        <a href="#shop" class="text-link">
             SHOP THE COLLECTION ↗
-
         </a>
 
     </div>
 
-    <span>
-        05 / 06
-    </span>
+    <span>05 / 06</span>
 
 </section>
 
-
-<!-- ================= REVIEWS ================= -->
-
+<!-- REVIEWS -->
 <section class="section reviews">
 
     <div class="section-head">
 
         <div>
-
-            <p class="label">
-                COMMUNITY
-            </p>
-
-            <h2>
-                WHAT THEY SAY
-            </h2>
-
+            <p class="label">COMMUNITY</p>
+            <h2>WHAT THEY SAY</h2>
         </div>
 
-        <span>
-            06 / 06
-        </span>
+        <span>06 / 06</span>
 
     </div>
 
-
     <div class="review-grid">
 
-
         <div>
-
-            <b>
-                ★★★★★
-            </b>
-
-            <p>
-                "The quality was way better than
-                I expected. Definitely ordering again."
-            </p>
-
-            <strong>
-                — ARYAN
-            </strong>
-
+            <b>★★★★★</b>
+            <p>"The quality was way better than I expected. Definitely ordering again."</p>
+            <strong>— ARYAN</strong>
         </div>
 
-
         <div>
-
-            <b>
-                ★★★★★
-            </b>
-
-            <p>
-                "Finally a thrift store where
-                the pieces don't feel basic."
-            </p>
-
-            <strong>
-                — RIYA
-            </strong>
-
+            <b>★★★★★</b>
+            <p>"Finally a thrift store where the pieces don't feel basic."</p>
+            <strong>— RIYA</strong>
         </div>
 
-
         <div>
-
-            <b>
-                ★★★★★
-            </b>
-
-            <p>
-                "Got a one-of-one vintage piece.
-                Everyone asked where I got it."
-            </p>
-
-            <strong>
-                — DEV
-            </strong>
-
+            <b>★★★★★</b>
+            <p>"Got a one-of-one vintage piece. Everyone asked where I got it."</p>
+            <strong>— DEV</strong>
         </div>
-
 
     </div>
 
 </section>
 
-
-<!-- ================= NEWSLETTER ================= -->
-
+<!-- NEWSLETTER -->
 <section class="newsletter">
 
     <div>
-
-        <p class="label">
-            STAY IN THE LOOP
-        </p>
+        <p class="label">STAY IN THE LOOP</p>
 
         <h2>
             FIRST ACCESS.<br>
             <em>NEW DROPS.</em>
         </h2>
-
     </div>
-
 
     <form id="newsletterForm">
 
@@ -1031,24 +594,18 @@ content="SB Trend Thrift — curated streetwear, denim and one-of-one thrift pie
             placeholder="YOUR EMAIL ADDRESS"
             required>
 
-        <button>
-            JOIN ↗
-        </button>
+        <button type="submit">JOIN ↗</button>
 
     </form>
 
 </section>
 
-
-<!-- ================= FOOTER ================= -->
-
+<!-- FOOTER -->
 <footer>
 
     <div class="footer-grid">
 
-
         <div>
-
             <a href="#" class="logo">
                 SB<span>THRIFT</span>
             </a>
@@ -1058,198 +615,87 @@ content="SB Trend Thrift — curated streetwear, denim and one-of-one thrift pie
                 Better style.<br>
                 Different energy.
             </p>
-
         </div>
-
 
         <div>
-
-            <h4>
-                SHOP
-            </h4>
-
-            <a href="#shop">
-                NEW IN
-            </a>
-
-            <a href="#shop">
-                DENIM
-            </a>
-
-            <a href="#shop">
-                VINTAGE
-            </a>
-
-            <a href="#shop">
-                UNDER ₹999
-            </a>
-
+            <h4>SHOP</h4>
+            <a href="#shop">NEW IN</a>
+            <a href="#shop">DENIM</a>
+            <a href="#shop">VINTAGE</a>
+            <a href="#shop">UNDER ₹999</a>
         </div>
-
 
         <div>
-
-            <h4>
-                INFO
-            </h4>
-
-            <a href="#story">
-                ABOUT
-            </a>
-
-            <a href="#">
-                SHIPPING
-            </a>
-
-            <a href="#">
-                RETURNS
-            </a>
-
-            <a href="#">
-                CONTACT
-            </a>
-
+            <h4>INFO</h4>
+            <a href="#story">ABOUT</a>
+            <a href="#">SHIPPING</a>
+            <a href="#">RETURNS</a>
+            <a href="#">CONTACT</a>
         </div>
-
 
         <div>
-
-            <h4>
-                SOCIAL
-            </h4>
-
-            <a href="#">
-                INSTAGRAM
-            </a>
-
-            <a href="#">
-                WHATSAPP
-            </a>
-
-            <a href="#">
-                PINTEREST
-            </a>
-
+            <h4>SOCIAL</h4>
+            <a href="#">INSTAGRAM</a>
+            <a href="#">WHATSAPP</a>
+            <a href="#">PINTEREST</a>
         </div>
-
 
     </div>
 
-
     <div class="footer-bottom">
-
-        <span>
-            © 2026 SB TREND THRIFT
-        </span>
-
-        <span>
-            MADE FOR THE DIFFERENT.
-        </span>
-
+        <span>© 2026 SB TREND THRIFT</span>
+        <span>MADE FOR THE DIFFERENT.</span>
     </div>
 
 </footer>
 
-
-<!-- ================= PRODUCT MODAL ================= -->
-
-<div
-    class="modal"
-    id="productModal">
+<!-- PRODUCT MODAL -->
+<div class="modal" id="productModal">
 
     <div class="modal-box">
 
-        <button
-            class="modal-close"
-            id="modalClose">
-
-            ×
-
-        </button>
-
+        <button class="modal-close" id="modalClose">×</button>
 
         <div class="modal-image">
-
-            <img
-                id="modalImage"
-                src=""
-                alt="">
-
+            <img id="modalImage" src="" alt="">
         </div>
-
 
         <div class="modal-info">
 
-            <p class="label">
-                SB TREND THRIFT
-            </p>
+            <p class="label">SB TREND THRIFT</p>
 
-            <h2 id="modalName">
-            </h2>
+            <h2 id="modalName"></h2>
 
-            <strong id="modalPrice">
-            </strong>
+            <strong id="modalPrice"></strong>
 
-            <p>
+            <p class="modal-description">
                 Carefully selected pre-loved piece.
                 Condition checked before shipping.
             </p>
 
-
             <div class="sizes">
 
-                <span>
-                    SELECT SIZE
-                </span>
+                <span>SELECT SIZE</span>
 
                 <div>
-
-                    <button class="size">
-                        S
-                    </button>
-
-                    <button class="size">
-                        M
-                    </button>
-
-                    <button class="size">
-                        L
-                    </button>
-
-                    <button class="size">
-                        XL
-                    </button>
-
+                    <button class="size">S</button>
+                    <button class="size">M</button>
+                    <button class="size">L</button>
+                    <button class="size">XL</button>
                 </div>
 
             </div>
 
-
             <div class="quantity">
 
-                <button id="minus">
-                    −
-                </button>
-
-                <span id="quantity">
-                    1
-                </span>
-
-                <button id="plus">
-                    +
-                </button>
+                <button id="minus">−</button>
+                <span id="quantity">1</span>
+                <button id="plus">+</button>
 
             </div>
 
-
-            <button
-                class="add-cart-modal"
-                id="addCart">
-
-                ADD TO CART —
-                <span id="modalTotal">
-                </span>
-
+            <button class="add-cart-modal" id="addCart">
+                ADD TO CART — <span id="modalTotal">₹0</span>
             </button>
 
         </div>
@@ -1258,73 +704,41 @@ content="SB Trend Thrift — curated streetwear, denim and one-of-one thrift pie
 
 </div>
 
+<!-- CART OVERLAY -->
+<div class="cart-overlay" id="cartOverlay"></div>
 
-<!-- ================= CART ================= -->
-
-<div
-    class="cart-overlay"
-    id="cartOverlay">
-</div>
-
-
-<aside
-    class="cart"
-    id="cart">
-
+<!-- CART -->
+<aside class="cart" id="cart">
 
     <div class="cart-head">
 
-        <h2>
-            YOUR CART
-        </h2>
+        <h2>YOUR CART</h2>
 
-        <button id="closeCart">
-            ×
-        </button>
+        <button id="closeCart">×</button>
 
     </div>
 
-
-    <div
-        class="cart-items"
-        id="cartItems">
-
+    <div class="cart-items" id="cartItems">
 
         <div class="empty">
 
-            <span>
-                00
-            </span>
+            <span>00</span>
 
-            <p>
-                YOUR CART IS EMPTY.
-            </p>
+            <p>YOUR CART IS EMPTY.</p>
 
-            <a
-                href="#shop"
-                id="continueShopping">
-
+            <a href="#shop" id="continueShopping">
                 SHOP NOW
-
             </a>
 
         </div>
 
     </div>
 
-
     <div class="cart-footer">
 
-        <div>
-
-            <span>
-                SUBTOTAL
-            </span>
-
-            <strong id="cartTotal">
-                ₹0
-            </strong>
-
+        <div class="cart-total-row">
+            <span>SUBTOTAL</span>
+            <strong id="cartTotal">₹0</strong>
         </div>
 
         <button id="checkout">
@@ -1335,55 +749,61 @@ content="SB Trend Thrift — curated streetwear, denim and one-of-one thrift pie
 
 </aside>
 
+<!-- SEARCH -->
+<div class="search-panel" id="searchPanel">
 
-<!-- ================= SEARCH ================= -->
+    <button id="closeSearch">×</button>
 
-<div
-    class="search-panel"
-    id="searchPanel">
+    <div class="search-inner">
 
-
-    <button id="closeSearch">
-        ×
-    </button>
-
-
-    <div>
-
-        <p>
-            WHAT ARE YOU LOOKING FOR?
-        </p>
+        <p>WHAT ARE YOU LOOKING FOR?</p>
 
         <input
             id="searchInput"
             type="text"
             placeholder="SEARCH PRODUCTS...">
 
-
         <div class="suggestions">
-
-            <button>
-                DENIM
-            </button>
-
-            <button>
-                VINTAGE
-            </button>
-
-            <button>
-                STREETWEAR
-            </button>
-
-            <button>
-                UNDER ₹999
-            </button>
-
+            <button>DENIM</button>
+            <button>VINTAGE</button>
+            <button>STREETWEAR</button>
         </div>
+
+        <div id="searchResults"></div>
 
     </div>
 
 </div>
 
+<!-- MOBILE BOTTOM NAV -->
+<div class="mobile-bottom-nav">
+
+    <a href="#">
+        <span>⌂</span>
+        HOME
+    </a>
+
+    <a href="#shop">
+        <span>＋</span>
+        SHOP
+    </a>
+
+    <button id="mobileSearchBtn">
+        <span>⌕</span>
+        SEARCH
+    </button>
+
+    <button id="mobileWishlistBtn">
+        <span>♡</span>
+        WISHLIST
+    </button>
+
+    <button id="mobileCartBtn">
+        <span>□</span>
+        CART
+    </button>
+
+</div>
 
 <script src="script.js"></script>
 
