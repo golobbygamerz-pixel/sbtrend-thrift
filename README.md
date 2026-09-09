@@ -1,0 +1,1 @@
+# sbtrend-thrift
