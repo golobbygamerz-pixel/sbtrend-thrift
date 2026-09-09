@@ -1,721 +1,939 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>SB THRIFT — Dress Different.</title>
-  <meta name="description" content="SB THRIFT — Curated vintage, streetwear and one-of-one fashion.">
+    <title>SB TREND THRIFT — Dress Different</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta
+        name="description"
+        content="SB Trend Thrift — curated thrift, vintage and streetwear pieces."
+    >
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- TOP BAR -->
-  <div class="topbar">
+<!-- ================= ANNOUNCEMENT ================= -->
+
+<div class="announcement">
     <div>FREE SHIPPING ON ORDERS ABOVE ₹999</div>
-    <div class="topbar-right">
-      <span>CURATED WEEKLY</span>
-      <span>•</span>
-      <span>PAN-INDIA SHIPPING</span>
-    </div>
-  </div>
+    <div>CURATED • ONE-OF-ONE • PRE-LOVED</div>
+</div>
 
 
-  <!-- NAVBAR -->
-  <header class="navbar" id="navbar">
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar" id="navbar">
 
     <a href="#" class="logo">
-      SB<span>THRIFT</span>
+        SB<span>THRIFT</span>
     </a>
 
-    <nav class="main-nav">
-      <a href="#new">NEW IN</a>
-      <a href="#shop">SHOP</a>
-      <a href="#men">MEN</a>
-      <a href="#women">WOMEN</a>
-      <a href="#vintage">VINTAGE</a>
-      <a href="#sale">SALE</a>
+    <nav class="desktop-nav">
+
+        <a href="#new">NEW IN</a>
+        <a href="#shop">SHOP</a>
+        <a href="#collections">COLLECTIONS</a>
+        <a href="#story">ABOUT</a>
+
     </nav>
 
-    <div class="nav-icons">
+    <div class="nav-actions">
 
-      <button class="nav-icon" id="searchOpen" aria-label="Search">
-        <svg viewBox="0 0 24 24">
-          <circle cx="11" cy="11" r="7"></circle>
-          <path d="M16 16L21 21"></path>
-        </svg>
-      </button>
+        <button class="nav-icon search-open" aria-label="Search">
+            <svg viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7"></circle>
+                <line x1="16.5" y1="16.5" x2="22" y2="22"></line>
+            </svg>
+        </button>
 
-      <button class="nav-icon" aria-label="Account">
-        <svg viewBox="0 0 24 24">
-          <circle cx="12" cy="8" r="4"></circle>
-          <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"></path>
-        </svg>
-      </button>
+        <button class="nav-icon" aria-label="Wishlist">
+            <svg viewBox="0 0 24 24">
+                <path d="M20.8 8.8c0 5.5-8.8 10.4-8.8 10.4S3.2 14.3 3.2 8.8A4.8 4.8 0 0 1 12 6.2a4.8 4.8 0 0 1 8.8 2.6Z"></path>
+            </svg>
+        </button>
 
-      <button class="nav-icon counter-button" aria-label="Wishlist">
-        <svg viewBox="0 0 24 24">
-          <path d="M20.8 8.8c0 5-8.8 10.2-8.8 10.2S3.2 13.8 3.2 8.8A4.8 4.8 0 0 1 12 6.1a4.8 4.8 0 0 1 8.8 2.7Z"></path>
-        </svg>
-        <b id="wishlistCount">0</b>
-      </button>
+        <button class="nav-icon cart-open" aria-label="Cart">
 
-      <button class="nav-icon counter-button" id="cartOpen" aria-label="Cart">
-        <svg viewBox="0 0 24 24">
-          <path d="M3 4h2l2 13h11l2-9H6"></path>
-          <circle cx="10" cy="21" r="1"></circle>
-          <circle cx="18" cy="21" r="1"></circle>
-        </svg>
-        <b id="cartCount">0</b>
-      </button>
+            <svg viewBox="0 0 24 24">
+                <path d="M5 8h14l-1 12H6L5 8Z"></path>
+                <path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
+            </svg>
 
-      <button class="hamburger" id="menuOpen">
-        <span></span>
-        <span></span>
-      </button>
+            <span class="cart-count">0</span>
+
+        </button>
+
+        <button class="menu-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+        </button>
 
     </div>
 
-  </header>
+</header>
 
 
-  <!-- MOBILE MENU -->
-  <aside class="mobile-menu" id="mobileMenu">
+<!-- ================= MOBILE MENU ================= -->
 
-    <button class="menu-close" id="menuClose">CLOSE ×</button>
+<div class="mobile-menu">
 
-    <div class="mobile-links">
-      <a href="#new">NEW IN <span>01</span></a>
-      <a href="#shop">SHOP <span>02</span></a>
-      <a href="#men">MEN <span>03</span></a>
-      <a href="#women">WOMEN <span>04</span></a>
-      <a href="#vintage">VINTAGE <span>05</span></a>
-      <a href="#sale">SALE <span>06</span></a>
-    </div>
+    <button class="mobile-close">×</button>
 
-    <div class="mobile-bottom">
-      <span>INSTAGRAM</span>
-      <span>CONTACT</span>
-    </div>
+    <div class="mobile-menu-links">
 
-  </aside>
-
-
-  <!-- SEARCH -->
-  <div class="search-overlay" id="searchOverlay">
-
-    <button class="search-close" id="searchClose">CLOSE ×</button>
-
-    <div class="search-box">
-
-      <span>WHAT ARE YOU LOOKING FOR?</span>
-
-      <div class="search-input-wrap">
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Search jackets, shirts, vintage..."
-        >
-
-        <button id="searchSubmit">→</button>
-      </div>
-
-      <div class="popular-searches">
-        <small>POPULAR SEARCHES</small>
-
-        <div>
-          <button>Vintage</button>
-          <button>Oversized</button>
-          <button>Jackets</button>
-          <button>Streetwear</button>
-        </div>
-      </div>
+        <a href="#">HOME</a>
+        <a href="#new">NEW IN</a>
+        <a href="#shop">SHOP</a>
+        <a href="#collections">COLLECTIONS</a>
+        <a href="#story">ABOUT</a>
 
     </div>
 
-  </div>
+    <div class="mobile-menu-footer">
+        <span>DRESS DIFFERENT.</span>
+        <span>SB TREND THRIFT</span>
+    </div>
+
+</div>
 
 
-  <!-- HERO -->
-  <section class="hero">
+<!-- ================= HERO ================= -->
 
-    <div class="hero-bg"></div>
+<main>
 
-    <div class="hero-shade"></div>
+<section class="hero">
+
+    <img
+        src="assets/hero.jpg"
+        alt="SB Trend Thrift fashion campaign"
+        class="hero-image"
+    >
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-top">
+
+        <span>SB TREND THRIFT / NEW DROP</span>
+
+        <span>01 — 03</span>
+
+    </div>
+
 
     <div class="hero-content">
 
-      <p class="eyebrow light">SB THRIFT / COLLECTION 01</p>
+        <p class="eyebrow">
+            CURATED THRIFT / PAN INDIA
+        </p>
 
-      <h1>
-        WEAR SOMETHING<br>
-        THEY WON'T FIND<br>
-        <em>EVERYWHERE.</em>
-      </h1>
+        <h1>
+            WEAR<br>
+            SOMETHING<br>
+            <span>DIFFERENT.</span>
+        </h1>
 
-      <p class="hero-copy">
-        Curated vintage, streetwear and one-of-one pieces
-        for people who don't dress like everyone else.
-      </p>
+        <p class="hero-description">
+            Handpicked thrift pieces, vintage finds
+            and everyday streetwear made for people
+            who don't want to dress like everyone else.
+        </p>
 
-      <div class="hero-actions">
-        <a href="#new" class="button button-white">
-          SHOP NEW DROP
-        </a>
+        <div class="hero-buttons">
 
-        <a href="#collections" class="button button-line">
-          EXPLORE COLLECTION
-        </a>
-      </div>
+            <a href="#shop" class="btn btn-light">
+                SHOP NEW DROP
+                <span>↗</span>
+            </a>
 
-    </div>
+            <a href="#collections" class="btn btn-outline">
+                EXPLORE COLLECTION
+                <span>↗</span>
+            </a>
 
-    <div class="hero-footer">
-
-      <span>CURATED WEEKLY</span>
-      <span>ONE-OF-ONE PIECES</span>
-      <span>PAN-INDIA SHIPPING</span>
-
-    </div>
-
-    <div class="scroll">
-      <span>SCROLL</span>
-      <i></i>
-    </div>
-
-  </section>
-
-
-  <!-- MARQUEE -->
-  <section class="marquee">
-
-    <div class="marquee-track">
-
-      <span>DRESS DIFFERENT</span>
-      <i>✦</i>
-
-      <span>SECOND LIFE</span>
-      <i>✦</i>
-
-      <span>CURATED NOT MASS PRODUCED</span>
-      <i>✦</i>
-
-      <span>DRESS DIFFERENT</span>
-      <i>✦</i>
-
-      <span>SECOND LIFE</span>
-      <i>✦</i>
+        </div>
 
     </div>
 
-  </section>
+
+    <div class="hero-bottom">
+
+        <div class="scroll-indicator">
+            <span class="scroll-line"></span>
+            <span>SCROLL TO EXPLORE</span>
+        </div>
+
+        <div class="hero-note">
+            <span>MORE THAN CLOTHES.</span>
+            <span>IT'S A LIFESTYLE.</span>
+        </div>
+
+    </div>
+
+</section>
 
 
-  <!-- COLLECTIONS -->
-  <section class="section collections" id="collections">
+<!-- ================= MARQUEE ================= -->
 
-    <div class="section-head">
+<section class="marquee-section">
 
-      <div>
-        <p class="eyebrow">01 / COLLECTIONS</p>
+    <div class="marquee">
+
+        <span>SB TREND THRIFT</span>
+        <span>✦</span>
+        <span>DRESS DIFFERENT</span>
+        <span>✦</span>
+        <span>PRE-LOVED</span>
+        <span>✦</span>
+        <span>CURATED WEEKLY</span>
+        <span>✦</span>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro section-padding">
+
+    <div class="section-number">01 / 06</div>
+
+    <div class="intro-content">
+
+        <p class="small-label">THE NEW THRIFT ERA</p>
 
         <h2>
-          FIND YOUR<br>
-          <em>FIT.</em>
+            NOT JUST CLOTHES.
+            <em>A SECOND LIFE.</em>
         </h2>
-      </div>
 
-      <a href="#shop" class="view-link">VIEW ALL →</a>
+        <p>
+            We hunt down unique pieces so you don't have to.
+            From vintage classics to modern streetwear,
+            every piece is carefully selected for its style,
+            character and quality.
+        </p>
+
+        <a href="#story" class="text-link">
+            OUR STORY <span>↗</span>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COLLECTIONS ================= -->
+
+<section class="collections section-padding" id="collections">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="small-label">SHOP BY STYLE</p>
+
+            <h2>THE COLLECTIONS</h2>
+        </div>
+
+        <span>02 / 06</span>
 
     </div>
 
 
     <div class="collection-grid">
 
-      <a href="#men" class="collection-card collection-big">
+        <a href="#shop" class="collection-card large">
 
-        <div class="collection-image image-men"></div>
+            <div class="collection-image men-image"></div>
 
-        <div class="collection-overlay"></div>
+            <div class="collection-info">
 
-        <div class="collection-text">
-          <span>01</span>
-          <h3>MEN</h3>
-          <p>STREETWEAR / VINTAGE</p>
-        </div>
+                <span>01</span>
 
-      </a>
+                <h3>MEN</h3>
 
+                <p>EVERYDAY / STREET / VINTAGE</p>
 
-      <a href="#women" class="collection-card">
+            </div>
 
-        <div class="collection-image image-women"></div>
-
-        <div class="collection-overlay"></div>
-
-        <div class="collection-text">
-          <span>02</span>
-          <h3>WOMEN</h3>
-          <p>CURATED / CONTEMPORARY</p>
-        </div>
-
-      </a>
+        </a>
 
 
-      <a href="#vintage" class="collection-card">
+        <a href="#shop" class="collection-card">
 
-        <div class="collection-image image-vintage"></div>
+            <div class="collection-image vintage-image"></div>
 
-        <div class="collection-overlay"></div>
+            <div class="collection-info">
 
-        <div class="collection-text">
-          <span>03</span>
-          <h3>VINTAGE</h3>
-          <p>RARE / ONE-OF-ONE</p>
-        </div>
+                <span>02</span>
 
-      </a>
+                <h3>VINTAGE</h3>
 
+                <p>TIMELESS / RARE / UNIQUE</p>
 
-      <a href="#shop" class="collection-card">
+            </div>
 
-        <div class="collection-image image-jackets"></div>
-
-        <div class="collection-overlay"></div>
-
-        <div class="collection-text">
-          <span>04</span>
-          <h3>JACKETS</h3>
-          <p>OUTERWEAR / LAYERS</p>
-        </div>
-
-      </a>
-
-    </div>
-
-  </section>
+        </a>
 
 
-  <!-- NEW DROP -->
-  <section class="section new-drop" id="new">
+        <a href="#shop" class="collection-card">
 
-    <div class="section-head">
+            <div class="collection-image street-image"></div>
 
-      <div>
-        <p class="eyebrow">02 / NEW DROP</p>
+            <div class="collection-info">
 
-        <h2>
-          JUST <em>IN.</em>
-        </h2>
-      </div>
+                <span>03</span>
 
-      <div class="slider-buttons">
-        <button id="previous">←</button>
-        <button id="next">→</button>
-      </div>
+                <h3>STREETWEAR</h3>
+
+                <p>BOLD / RELAXED / URBAN</p>
+
+            </div>
+
+        </a>
+
+
+        <a href="#shop" class="collection-card large">
+
+            <div class="collection-image sale-image"></div>
+
+            <div class="collection-info">
+
+                <span>04</span>
+
+                <h3>UNDER ₹999</h3>
+
+                <p>GOOD STYLE / BETTER PRICE</p>
+
+            </div>
+
+        </a>
 
     </div>
 
-
-    <div class="products" id="products"></div>
-
-  </section>
+</section>
 
 
-  <!-- PRICE -->
-  <section class="price-section" id="shop">
+<!-- ================= NEW DROP ================= -->
 
-    <div class="price-left">
+<section class="products-section section-padding" id="new">
 
-      <p class="eyebrow light">03 / SHOP BY PRICE</p>
+    <div class="section-heading">
 
-      <h2>
-        GOOD STYLE<br>
-        <em>DOESN'T NEED</em><br>
-        TO BE EXPENSIVE.
-      </h2>
+        <div>
+
+            <p class="small-label">JUST LANDED</p>
+
+            <h2>NEW DROP</h2>
+
+        </div>
+
+        <a href="#shop" class="text-link">
+            VIEW ALL <span>↗</span>
+        </a>
 
     </div>
 
 
-    <div class="price-grid">
+    <div class="product-grid">
 
-      <a href="#">
-        <span>UNDER</span>
-        <strong>₹499</strong>
-        <small>EXPLORE →</small>
-      </a>
 
-      <a href="#">
-        <span>UNDER</span>
-        <strong>₹999</strong>
-        <small>EXPLORE →</small>
-      </a>
+        <!-- PRODUCT 1 -->
 
-      <a href="#">
-        <span>UNDER</span>
-        <strong>₹1499</strong>
-        <small>EXPLORE →</small>
-      </a>
+        <article class="product-card">
 
-      <a href="#">
-        <span>UNDER</span>
-        <strong>₹2499</strong>
-        <small>EXPLORE →</small>
-      </a>
+            <div class="product-image">
+
+                <img
+                    src="https://assets.zyrosite.com/cdn-cgi/image/format%3Dauto%2Cw%3D768%2Ch%3D1083%2Cfit%3Dcrop/K6ibulUslh4FyGer/img_0299---copy-5PoZhFGYL6NFKIcT.JPG"
+                    alt="Thrift fashion product"
+                >
+
+                <span class="product-tag">NEW</span>
+
+                <button class="wishlist-btn">♡</button>
+
+                <button class="quick-add" data-product="Vintage Graphic Tee">
+                    QUICK ADD
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <div>
+
+                    <h3>Vintage Graphic Tee</h3>
+
+                    <p>PRE-LOVED / GOOD CONDITION</p>
+
+                </div>
+
+                <strong>₹699</strong>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 2 -->
+
+        <article class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="https://assets.zyrosite.com/cdn-cgi/image/format%3Dauto%2Cw%3D768%2Ch%3D1083%2Cfit%3Dcrop/K6ibulUslh4FyGer/img_0298---copy-Dmnn6YJD8HYrc0sG.JPG"
+                    alt="Thrift clothing"
+                >
+
+                <span class="product-tag">ONE PIECE</span>
+
+                <button class="wishlist-btn">♡</button>
+
+                <button class="quick-add" data-product="Vintage Oversized Shirt">
+                    QUICK ADD
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <div>
+
+                    <h3>Vintage Oversized Shirt</h3>
+
+                    <p>PRE-LOVED / CURATED</p>
+
+                </div>
+
+                <strong>₹899</strong>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 3 -->
+
+        <article class="product-card">
+
+            <div class="product-image product-placeholder third-product">
+
+                <span class="placeholder-text">SB<br>THRIFT</span>
+
+                <span class="product-tag">LIMITED</span>
+
+                <button class="wishlist-btn">♡</button>
+
+                <button class="quick-add" data-product="Oversized Street Tee">
+                    QUICK ADD
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <div>
+
+                    <h3>Oversized Street Tee</h3>
+
+                    <p>STREETWEAR / RELAXED FIT</p>
+
+                </div>
+
+                <strong>₹799</strong>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 4 -->
+
+        <article class="product-card">
+
+            <div class="product-image product-placeholder fourth-product">
+
+                <span class="placeholder-text">SB<br>THRIFT</span>
+
+                <span class="product-tag">RARE</span>
+
+                <button class="wishlist-btn">♡</button>
+
+                <button class="quick-add" data-product="Vintage Jacket">
+                    QUICK ADD
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <div>
+
+                    <h3>Vintage Jacket</h3>
+
+                    <p>LIMITED / HANDPICKED</p>
+
+                </div>
+
+                <strong>₹1,499</strong>
+
+            </div>
+
+        </article>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- EDITORIAL -->
-  <section class="editorial">
+<!-- ================= EDITORIAL ================= -->
+
+<section class="editorial">
 
     <div class="editorial-image"></div>
 
     <div class="editorial-content">
 
-      <p class="eyebrow">04 / THE THRIFT EDIT</p>
+        <span class="editorial-number">03 / 06</span>
 
-      <h2>
-        NOT EVERYTHING<br>
-        NEEDS TO BE<br>
-        <em>NEW.</em>
-      </h2>
+        <p class="small-label">THE THRIFT EDIT</p>
 
-      <p>
-        The best pieces aren't always hanging under
-        perfect lighting in a showroom. Sometimes
-        they're waiting to be discovered.
-      </p>
+        <h2>
+            OLD PIECES.<br>
+            <em>NEW ENERGY.</em>
+        </h2>
 
-      <a href="#new" class="button button-dark">
-        SHOP THE EDIT
-      </a>
+        <p>
+            Thrift isn't about wearing what's left behind.
+            It's about finding what everyone else missed.
+        </p>
+
+        <a href="#shop" class="btn dark-btn">
+            SHOP THE EDIT
+            <span>↗</span>
+        </a>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- WHY US -->
-  <section class="section why">
+<!-- ================= WHY US ================= -->
 
-    <div class="section-head">
+<section class="why section-padding">
 
-      <div>
-        <p class="eyebrow">05 / WHY SB THRIFT</p>
+    <div class="section-heading">
 
-        <h2>
-          BETTER<br>
-          <em>BY DESIGN.</em>
-        </h2>
-      </div>
+        <div>
+
+            <p class="small-label">WHY SB</p>
+
+            <h2>THE SB STANDARD</h2>
+
+        </div>
+
+        <span>04 / 06</span>
 
     </div>
 
 
     <div class="why-grid">
 
-      <article>
-        <span>01</span>
-        <h3>CURATED PIECES</h3>
-        <p>
-          Every piece is selected for its character,
-          quality and ability to stand out.
-        </p>
-      </article>
+        <div class="why-item">
 
-      <article>
-        <span>02</span>
-        <h3>LIMITED STOCK</h3>
-        <p>
-          No endless inventory. When it's gone,
-          it's usually gone.
-        </p>
-      </article>
+            <span>01</span>
 
-      <article>
-        <span>03</span>
-        <h3>QUALITY CHECKED</h3>
-        <p>
-          Every item goes through a quality check
-          before reaching you.
-        </p>
-      </article>
+            <h3>HANDPICKED</h3>
 
-      <article>
-        <span>04</span>
-        <h3>SECOND LIFE</h3>
-        <p>
-          Better clothes, less waste and a style
-          that doesn't follow the crowd.
-        </p>
-      </article>
+            <p>
+                Every piece is selected manually.
+                No random bulk drops.
+            </p>
+
+        </div>
+
+        <div class="why-item">
+
+            <span>02</span>
+
+            <h3>LIMITED STOCK</h3>
+
+            <p>
+                Most pieces are one-of-one.
+                If you like it, don't wait.
+            </p>
+
+        </div>
+
+        <div class="why-item">
+
+            <span>03</span>
+
+            <h3>QUALITY CHECKED</h3>
+
+            <p>
+                Every item goes through our
+                quality check before shipping.
+            </p>
+
+        </div>
+
+        <div class="why-item">
+
+            <span>04</span>
+
+            <h3>BETTER FASHION</h3>
+
+            <p>
+                Give clothes another life while
+                keeping your style original.
+            </p>
+
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- STORY -->
-  <section class="story">
+<!-- ================= STORY ================= -->
 
-    <div class="story-image"></div>
+<section class="story" id="story">
 
     <div class="story-content">
 
-      <p class="eyebrow">06 / OUR STORY</p>
+        <p class="small-label">OUR PHILOSOPHY</p>
 
-      <h2>
-        NOT JUST CLOTHES.<br>
-        A <em>SECOND LIFE.</em>
-      </h2>
+        <h2>
+            DRESS<br>
+            <em>DIFFERENT.</em>
+        </h2>
 
-      <p>
-        SB THRIFT exists for people who see clothing
-        differently. We hunt for pieces with history,
-        personality and a little bit of attitude.
-      </p>
+        <p>
+            SB Trend Thrift was built for people who see
+            fashion differently. We believe your outfit
+            should have personality — not just a logo.
+        </p>
 
-      <a href="#" class="text-button">
-        MORE ABOUT US →
-      </a>
+        <a href="#" class="text-link">
+            READ OUR STORY <span>↗</span>
+        </a>
 
     </div>
 
-  </section>
+    <div class="story-side">
+
+        <span>05 / 06</span>
+
+        <p>
+            CURATED<br>
+            WITH INTENTION.
+        </p>
+
+    </div>
+
+</section>
 
 
-  <!-- REVIEWS -->
-  <section class="section reviews">
+<!-- ================= REVIEWS ================= -->
 
-    <div class="section-head">
+<section class="reviews section-padding">
 
-      <div>
-        <p class="eyebrow">07 / COMMUNITY</p>
+    <div class="section-heading">
 
-        <h2>
-          THEY <em>GET IT.</em>
-        </h2>
-      </div>
+        <div>
+
+            <p class="small-label">COMMUNITY</p>
+
+            <h2>WHAT THEY SAY</h2>
+
+        </div>
+
+        <span>06 / 06</span>
 
     </div>
 
 
     <div class="review-grid">
 
-      <article>
-        <div class="stars">★★★★★</div>
+        <article class="review">
 
-        <p>
-          “The quality was honestly better than
-          I expected. The jacket looks insane.”
-        </p>
+            <span>★★★★★</span>
 
-        <span>— ARYAN / MUMBAI</span>
-      </article>
+            <p>
+                "The quality was actually way better
+                than I expected. Definitely ordering again."
+            </p>
 
-      <article>
-        <div class="stars">★★★★★</div>
+            <strong>— ARYAN</strong>
 
-        <p>
-          “Finally a thrift page where the pieces
-          actually feel curated.”
-        </p>
+        </article>
 
-        <span>— RHEA / DELHI</span>
-      </article>
+        <article class="review">
 
-      <article>
-        <div class="stars">★★★★★</div>
+            <span>★★★★★</span>
 
-        <p>
-          “Got my first vintage piece from SB.
-          Definitely ordering again.”
-        </p>
+            <p>
+                "Finally a thrift store where the pieces
+                don't feel basic."
+            </p>
 
-        <span>— KUNAL / BANGALORE</span>
-      </article>
+            <strong>— RIYA</strong>
+
+        </article>
+
+        <article class="review">
+
+            <span>★★★★★</span>
+
+            <p>
+                "Got a one-of-one vintage piece.
+                Literally everyone asked where I got it."
+            </p>
+
+            <strong>— DEV</strong>
+
+        </article>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- NEWSLETTER -->
-  <section class="newsletter">
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
 
     <div>
 
-      <p class="eyebrow light">08 / DROP ALERT</p>
+        <p class="small-label">STAY IN THE LOOP</p>
 
-      <h2>
-        BE FIRST.<br>
-        <em>DON'T MISS THE DROP.</em>
-      </h2>
+        <h2>
+            FIRST ACCESS.<br>
+            <em>NEW DROPS.</em>
+        </h2>
 
     </div>
 
+    <form class="newsletter-form">
 
-    <form id="newsletter">
+        <input
+            type="email"
+            placeholder="YOUR EMAIL ADDRESS"
+            required
+        >
 
-      <input
-        type="email"
-        placeholder="YOUR EMAIL ADDRESS"
-        required
-      >
-
-      <button type="submit">
-        JOIN → 
-      </button>
+        <button type="submit">
+            JOIN <span>↗</span>
+        </button>
 
     </form>
 
-  </section>
+</section>
+
+</main>
 
 
-  <!-- FOOTER -->
-  <footer>
+<!-- ================= FOOTER ================= -->
 
-    <div class="footer-top">
+<footer>
 
-      <div class="footer-brand">
+    <div class="footer-main">
 
-        <a href="#" class="footer-logo">
-          SB<span>THRIFT</span>
-        </a>
+        <div class="footer-brand">
 
-        <p>
-          MINIMAL × VINTAGE × STREETWEAR × EDITORIAL
-        </p>
+            <a href="#" class="logo footer-logo">
+                SB<span>THRIFT</span>
+            </a>
 
-      </div>
+            <p>
+                Curated thrift.<br>
+                Better style.<br>
+                Different energy.
+            </p>
 
-
-      <div class="footer-column">
-
-        <h4>SHOP</h4>
-
-        <a href="#new">New In</a>
-        <a href="#shop">Shop All</a>
-        <a href="#men">Men</a>
-        <a href="#women">Women</a>
-        <a href="#vintage">Vintage</a>
-
-      </div>
+        </div>
 
 
-      <div class="footer-column">
+        <div class="footer-column">
 
-        <h4>HELP</h4>
+            <h4>SHOP</h4>
 
-        <a href="#">Shipping</a>
-        <a href="#">Returns</a>
-        <a href="#">FAQ</a>
-        <a href="#">Track Order</a>
-        <a href="#">Contact</a>
+            <a href="#shop">NEW IN</a>
+            <a href="#shop">MEN</a>
+            <a href="#shop">VINTAGE</a>
+            <a href="#shop">UNDER ₹999</a>
 
-      </div>
+        </div>
 
 
-      <div class="footer-column">
+        <div class="footer-column">
 
-        <h4>FOLLOW</h4>
+            <h4>INFO</h4>
 
-        <a href="#">Instagram</a>
-        <a href="#">Pinterest</a>
-        <a href="#">WhatsApp</a>
+            <a href="#story">ABOUT</a>
+            <a href="#">SHIPPING</a>
+            <a href="#">RETURNS</a>
+            <a href="#">CONTACT</a>
 
-      </div>
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>SOCIAL</h4>
+
+            <a href="#">INSTAGRAM</a>
+            <a href="#">WHATSAPP</a>
+            <a href="#">PINTEREST</a>
+
+        </div>
 
     </div>
 
 
     <div class="footer-bottom">
 
-      <span>© 2026 SB THRIFT</span>
+        <span>© 2026 SB TREND THRIFT</span>
 
-      <span>MADE FOR PEOPLE WHO DRESS DIFFERENT.</span>
-
-      <span>PRIVACY / TERMS</span>
+        <span>MADE FOR THE DIFFERENT.</span>
 
     </div>
 
-  </footer>
+</footer>
 
 
-  <!-- CART DRAWER -->
-  <div class="cart-backdrop" id="cartBackdrop"></div>
+<!-- ================= CART DRAWER ================= -->
 
-  <aside class="cart-drawer" id="cartDrawer">
+<div class="cart-overlay"></div>
+
+<aside class="cart-drawer">
 
     <div class="cart-header">
 
-      <h3>YOUR BAG</h3>
+        <h2>YOUR CART</h2>
 
-      <button id="cartClose">CLOSE ×</button>
-
-    </div>
-
-
-    <div class="shipping-progress">
-
-      <p id="shippingText">
-        Add ₹999 to unlock free shipping.
-      </p>
-
-      <div>
-        <span id="shippingBar"></span>
-      </div>
+        <button class="cart-close">×</button>
 
     </div>
 
 
-    <div class="cart-items" id="cartItems">
+    <div class="cart-items">
 
-      <div class="empty-cart">
-        YOUR BAG IS EMPTY.
-      </div>
+        <div class="empty-cart">
+
+            <span>00</span>
+
+            <p>
+                YOUR CART IS EMPTY.
+            </p>
+
+            <a href="#shop" class="btn dark-btn cart-shop">
+                SHOP NOW
+            </a>
+
+        </div>
 
     </div>
 
 
     <div class="cart-footer">
 
-      <div class="subtotal">
-        <span>SUBTOTAL</span>
-        <strong id="subtotal">₹0</strong>
-      </div>
+        <div class="cart-total">
 
-      <button class="checkout-button">
-        CHECKOUT →
-      </button>
+            <span>SUBTOTAL</span>
 
-      <small>
-        Taxes and shipping calculated at checkout.
-      </small>
+            <strong>₹0</strong>
+
+        </div>
+
+        <button class="checkout-btn">
+            CHECKOUT →
+        </button>
 
     </div>
 
-  </aside>
+</aside>
 
 
-  <!-- TOAST -->
-  <div class="toast" id="toast">
-    ADDED TO BAG
-  </div>
+<!-- ================= SEARCH ================= -->
+
+<div class="search-overlay">
+
+    <button class="search-close">×</button>
+
+    <div class="search-inner">
+
+        <p>WHAT ARE YOU LOOKING FOR?</p>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="SEARCH PRODUCTS..."
+        >
+
+        <div class="search-suggestions">
+
+            <span>VINTAGE</span>
+            <span>OVERSIZED</span>
+            <span>SHIRTS</span>
+            <span>STREETWEAR</span>
+            <span>UNDER ₹999</span>
+
+        </div>
+
+    </div>
+
+</div>
 
 
-  <script src="script.js"></script>
+<!-- ================= MOBILE BOTTOM NAV ================= -->
+
+<nav class="mobile-bottom-nav">
+
+    <a href="#">
+        <span>⌂</span>
+        HOME
+    </a>
+
+    <a href="#shop">
+        <span>＋</span>
+        SHOP
+    </a>
+
+    <button class="search-open">
+        <span>⌕</span>
+        SEARCH
+    </button>
+
+    <a href="#">
+        <span>♡</span>
+        SAVED
+    </a>
+
+    <button class="cart-open">
+        <span>◯</span>
+        CART
+    </button>
+
+</nav>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
