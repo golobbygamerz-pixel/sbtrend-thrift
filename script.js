@@ -1,320 +1,457 @@
-/* =========================================================
-   SB TREND THRIFT
-========================================================= */
+document.addEventListener("DOMContentLoaded", () => {
+
+    const cart = [];
+    let currentProduct = null;
+    let quantity = 1;
+    let selectedSize = null;
 
 
-/* =========================================================
-   NAVBAR SCROLL
-========================================================= */
+    /* ================= MENU ================= */
 
-const navbar = document.getElementById("navbar");
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const closeMenu = document.getElementById("closeMenu");
 
-window.addEventListener("scroll", () => {
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("active");
+    });
 
-    if (window.scrollY > 70) {
-
-        navbar.classList.add("scrolled");
-
-    } else {
-
-        navbar.classList.remove("scrolled");
-
-    }
-
-});
-
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-const menuToggle = document.querySelector(".menu-toggle");
-const mobileMenu = document.querySelector(".mobile-menu");
-const mobileClose = document.querySelector(".mobile-close");
-
-menuToggle.addEventListener("click", () => {
-
-    mobileMenu.classList.add("active");
-
-    document.body.classList.add("no-scroll");
-
-});
-
-
-mobileClose.addEventListener("click", () => {
-
-    mobileMenu.classList.remove("active");
-
-    document.body.classList.remove("no-scroll");
-
-});
-
-
-document.querySelectorAll(".mobile-menu-links a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
+    closeMenu.addEventListener("click", () => {
         mobileMenu.classList.remove("active");
+    });
 
-        document.body.classList.remove("no-scroll");
+    document.querySelectorAll(".mobile-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            mobileMenu.classList.remove("active");
+        });
+    });
+
+
+    /* ================= SEARCH ================= */
+
+    const searchBtn = document.getElementById("searchBtn");
+    const searchPanel = document.getElementById("searchPanel");
+    const closeSearch = document.getElementById("closeSearch");
+    const searchInput = document.getElementById("searchInput");
+
+    searchBtn.addEventListener("click", () => {
+        searchPanel.classList.add("active");
+        setTimeout(() => searchInput.focus(), 200);
+    });
+
+    closeSearch.addEventListener("click", () => {
+        searchPanel.classList.remove("active");
+    });
+
+    searchInput.addEventListener("input", () => {
+
+        const value = searchInput.value.toLowerCase();
+
+        document.querySelectorAll(".product").forEach(product => {
+
+            const name = product.dataset.name.toLowerCase();
+
+            product.style.display =
+                name.includes(value) ? "" : "none";
+
+        });
 
     });
 
-});
 
+    document.querySelectorAll(".suggestions button").forEach(btn => {
 
-/* =========================================================
-   SEARCH
-========================================================= */
+        btn.addEventListener("click", () => {
 
-const searchOverlay = document.querySelector(".search-overlay");
-const searchClose = document.querySelector(".search-close");
-const searchButtons = document.querySelectorAll(".search-open");
-const searchInput = document.getElementById("searchInput");
+            searchInput.value = btn.textContent;
 
+            searchInput.dispatchEvent(new Event("input"));
 
-searchButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        searchOverlay.classList.add("active");
-
-        document.body.classList.add("no-scroll");
-
-        setTimeout(() => {
-
-            searchInput.focus();
-
-        }, 400);
+        });
 
     });
 
-});
 
+    /* ================= FILTER ================= */
 
-searchClose.addEventListener("click", () => {
+    const filterBtn = document.getElementById("filterBtn");
+    const filters = document.getElementById("filters");
 
-    searchOverlay.classList.remove("active");
+    filterBtn.addEventListener("click", () => {
+        filters.classList.toggle("show");
+    });
 
-    document.body.classList.remove("no-scroll");
+    document.querySelectorAll(".filter").forEach(button => {
 
-});
+        button.addEventListener("click", () => {
 
+            document.querySelectorAll(".filter")
+                .forEach(x => x.classList.remove("active"));
 
-/* =========================================================
-   SEARCH KEYWORDS
-========================================================= */
+            button.classList.add("active");
 
-document.querySelectorAll(".search-suggestions span").forEach(item => {
+            const category = button.dataset.filter;
 
-    item.addEventListener("click", () => {
+            document.querySelectorAll(".product").forEach(product => {
 
-        searchInput.value = item.textContent;
+                if (
+                    category === "all" ||
+                    product.dataset.category === category
+                ) {
+                    product.style.display = "";
+                } else {
+                    product.style.display = "none";
+                }
 
-        searchInput.focus();
+            });
+
+        });
 
     });
 
-});
 
+    /* ================= WISHLIST ================= */
 
-/* =========================================================
-   CART
-========================================================= */
+    document.querySelectorAll(".heart").forEach(button => {
 
-const cartDrawer = document.querySelector(".cart-drawer");
-const cartOverlay = document.querySelector(".cart-overlay");
-const cartClose = document.querySelector(".cart-close");
-const cartButtons = document.querySelectorAll(".cart-open");
+        button.addEventListener("click", e => {
 
-const cartCount = document.querySelector(".cart-count");
+            e.stopPropagation();
 
-let cart = [];
+            button.classList.toggle("liked");
 
+            button.textContent =
+                button.classList.contains("liked")
+                ? "♥"
+                : "♡";
 
-function openCart() {
-
-    cartDrawer.classList.add("active");
-
-    cartOverlay.classList.add("active");
-
-    document.body.classList.add("no-scroll");
-
-}
-
-
-function closeCart() {
-
-    cartDrawer.classList.remove("active");
-
-    cartOverlay.classList.remove("active");
-
-    document.body.classList.remove("no-scroll");
-
-}
-
-
-cartButtons.forEach(button => {
-
-    button.addEventListener("click", openCart);
-
-});
-
-
-cartClose.addEventListener("click", closeCart);
-
-cartOverlay.addEventListener("click", closeCart);
-
-
-/* =========================================================
-   QUICK ADD
-========================================================= */
-
-const quickAddButtons = document.querySelectorAll(".quick-add");
-
-quickAddButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        const product = button.dataset.product;
-
-        cart.push(product);
-
-        cartCount.textContent = cart.length;
-
-        button.textContent = "ADDED ✓";
-
-        setTimeout(() => {
-
-            button.textContent = "QUICK ADD";
-
-        }, 1200);
-
-        openCart();
+        });
 
     });
 
-});
+
+    /* ================= PRODUCT MODAL ================= */
+
+    const modal = document.getElementById("productModal");
+    const modalClose = document.getElementById("modalClose");
+
+    const modalImage = document.getElementById("modalImage");
+    const modalName = document.getElementById("modalName");
+    const modalPrice = document.getElementById("modalPrice");
+    const modalTotal = document.getElementById("modalTotal");
+
+    const quantityText = document.getElementById("quantity");
+
+    document.querySelectorAll(".quick-add").forEach(button => {
+
+        button.addEventListener("click", e => {
+
+            const product = e.target.closest(".product");
+
+            currentProduct = {
+                name: product.dataset.name,
+                price: Number(product.dataset.price.replace(",", "")),
+                image: product.dataset.image
+            };
+
+            quantity = 1;
+            selectedSize = null;
+
+            quantityText.textContent = quantity;
+
+            modalImage.src = currentProduct.image;
+            modalName.textContent = currentProduct.name;
+            modalPrice.textContent =
+                "₹" + currentProduct.price.toLocaleString("en-IN");
+
+            modalTotal.textContent =
+                "₹" + currentProduct.price.toLocaleString("en-IN");
+
+            document.querySelectorAll(".size")
+                .forEach(x => x.classList.remove("selected"));
+
+            modal.classList.add("active");
+
+        });
+
+    });
 
 
-/* =========================================================
-   WISHLIST
-========================================================= */
+    modalClose.addEventListener("click", closeModal);
 
-document.querySelectorAll(".wishlist-btn").forEach(button => {
+    modal.addEventListener("click", e => {
 
-    button.addEventListener("click", () => {
-
-        if (button.classList.contains("saved")) {
-
-            button.classList.remove("saved");
-
-            button.textContent = "♡";
-
-        } else {
-
-            button.classList.add("saved");
-
-            button.textContent = "♥";
-
+        if (e.target === modal) {
+            closeModal();
         }
 
     });
 
-});
-
-
-/* =========================================================
-   NEWSLETTER
-========================================================= */
-
-const newsletterForm = document.querySelector(".newsletter-form");
-
-newsletterForm.addEventListener("submit", event => {
-
-    event.preventDefault();
-
-    const input = newsletterForm.querySelector("input");
-
-    const button = newsletterForm.querySelector("button");
-
-    if (!input.value) return;
-
-    button.innerHTML = "YOU'RE IN ✓";
-
-    input.value = "";
-
-});
-
-
-/* =========================================================
-   ESCAPE KEY
-========================================================= */
-
-document.addEventListener("keydown", event => {
-
-    if (event.key === "Escape") {
-
-        mobileMenu.classList.remove("active");
-
-        searchOverlay.classList.remove("active");
-
-        cartDrawer.classList.remove("active");
-
-        cartOverlay.classList.remove("active");
-
-        document.body.classList.remove("no-scroll");
-
+    function closeModal(){
+        modal.classList.remove("active");
     }
 
-});
 
+    /* ================= SIZE ================= */
 
-/* =========================================================
-   REVEAL ANIMATION
-========================================================= */
+    document.querySelectorAll(".size").forEach(size => {
 
-const revealElements = document.querySelectorAll(
-    ".intro-content, .collection-card, .product-card, .why-item, .review, .story-content"
-);
+        size.addEventListener("click", () => {
 
+            document.querySelectorAll(".size")
+                .forEach(x => x.classList.remove("selected"));
 
-const revealObserver = new IntersectionObserver(
+            size.classList.add("selected");
 
-    entries => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.style.opacity = "1";
-
-                entry.target.style.transform = "translateY(0)";
-
-                revealObserver.unobserve(entry.target);
-
-            }
+            selectedSize = size.textContent;
 
         });
 
-    },
+    });
 
-    {
-        threshold: .1
+
+    /* ================= QUANTITY ================= */
+
+    document.getElementById("minus").addEventListener("click", () => {
+
+        if(quantity > 1){
+            quantity--;
+            updateQuantity();
+        }
+
+    });
+
+    document.getElementById("plus").addEventListener("click", () => {
+
+        quantity++;
+        updateQuantity();
+
+    });
+
+    function updateQuantity(){
+
+        quantityText.textContent = quantity;
+
+        const total =
+            currentProduct.price * quantity;
+
+        modalTotal.textContent =
+            "₹" + total.toLocaleString("en-IN");
+
     }
 
-);
+
+    /* ================= ADD CART ================= */
+
+    document.getElementById("addCart").addEventListener("click", () => {
+
+        if(!selectedSize){
+
+            alert("Please select a size.");
+
+            return;
+
+        }
+
+        cart.push({
+
+            name: currentProduct.name,
+            price: currentProduct.price,
+            image: currentProduct.image,
+            size: selectedSize,
+            quantity: quantity
+
+        });
+
+        updateCartCount();
+
+        closeModal();
+
+        openCart();
+
+        renderCart();
+
+    });
 
 
-revealElements.forEach(element => {
+    /* ================= CART ================= */
 
-    element.style.opacity = "0";
+    const cartPanel = document.getElementById("cart");
+    const cartOverlay = document.getElementById("cartOverlay");
 
-    element.style.transform = "translateY(30px)";
+    document.getElementById("cartBtn")
+        .addEventListener("click", openCart);
 
-    element.style.transition =
-        "opacity .8s ease, transform .8s cubic-bezier(.2,.6,.2,1)";
+    document.getElementById("closeCart")
+        .addEventListener("click", closeCart);
 
-    revealObserver.observe(element);
+    cartOverlay.addEventListener("click", closeCart);
+
+    function openCart(){
+
+        cartPanel.classList.add("active");
+        cartOverlay.classList.add("active");
+
+    }
+
+    function closeCart(){
+
+        cartPanel.classList.remove("active");
+        cartOverlay.classList.remove("active");
+
+    }
+
+
+    function updateCartCount(){
+
+        const count =
+            cart.reduce((sum,item) => sum + item.quantity, 0);
+
+        document.getElementById("cartCount")
+            .textContent = count;
+
+    }
+
+
+    function renderCart(){
+
+        const container =
+            document.getElementById("cartItems");
+
+        if(cart.length === 0){
+
+            container.innerHTML = `
+                <div class="empty">
+                    <span>00</span>
+                    <p>YOUR CART IS EMPTY.</p>
+                    <a href="#shop" id="continueShopping">
+                        SHOP NOW
+                    </a>
+                </div>
+            `;
+
+            return;
+
+        }
+
+        container.innerHTML = "";
+
+        cart.forEach((item,index) => {
+
+            const element = document.createElement("div");
+
+            element.className = "cart-product";
+
+            element.innerHTML = `
+
+                <img src="${item.image}" alt="${item.name}">
+
+                <div>
+                    <h4>${item.name}</h4>
+
+                    <p>
+                        SIZE ${item.size} · QTY ${item.quantity}
+                    </p>
+
+                    <p>
+                        ₹${(item.price * item.quantity)
+                        .toLocaleString("en-IN")}
+                    </p>
+                </div>
+
+                <button class="remove">
+                    ×
+                </button>
+            `;
+
+            element.querySelector(".remove")
+                .addEventListener("click", () => {
+
+                    cart.splice(index,1);
+
+                    updateCartCount();
+                    renderCart();
+                    updateTotal();
+
+                });
+
+            container.appendChild(element);
+
+        });
+
+        updateTotal();
+
+    }
+
+
+    function updateTotal(){
+
+        const total =
+            cart.reduce(
+                (sum,item) =>
+                sum + item.price * item.quantity,
+                0
+            );
+
+        document.getElementById("cartTotal")
+            .textContent =
+            "₹" + total.toLocaleString("en-IN");
+
+    }
+
+
+    /* ================= CHECKOUT ================= */
+
+    document.getElementById("checkout")
+        .addEventListener("click", () => {
+
+            if(cart.length === 0){
+
+                alert("Your cart is empty.");
+
+                return;
+
+            }
+
+            alert(
+                "Checkout is ready to connect with your payment gateway."
+            );
+
+        });
+
+
+    /* ================= NEWSLETTER ================= */
+
+    document.getElementById("newsletterForm")
+        .addEventListener("submit", e => {
+
+            e.preventDefault();
+
+            const input =
+                e.target.querySelector("input");
+
+            alert(
+                "You're on the list. Welcome to SB THRIFT."
+            );
+
+            input.value = "";
+
+        });
+
+
+    /* ================= ESCAPE KEY ================= */
+
+    document.addEventListener("keydown", e => {
+
+        if(e.key === "Escape"){
+
+            closeModal();
+            closeCart();
+            searchPanel.classList.remove("active");
+            mobileMenu.classList.remove("active");
+
+        }
+
+    });
 
 });
